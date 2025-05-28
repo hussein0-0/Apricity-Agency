@@ -34,8 +34,10 @@
 <style>
 section{
   background-color: #ffffff;
+  padding-bottom: 7rem;
     margin: 2rem 0rem;
-    margin-bottom: 17rem;
+    margin-bottom: 12rem;
+    overflow: hidden;
 }
 
 .container{

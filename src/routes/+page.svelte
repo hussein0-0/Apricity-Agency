@@ -5,6 +5,7 @@
   import SevricesTitle from "../Components/SevricesTitle.svelte";
   import ServicesContent from "../Components/ServicesContent.svelte";
   import WhyUs from "../Components/WhyUs.svelte";
+  import OurTeamTitle from "../Components/OurTeamTitle.svelte";
 
 
 </script>
@@ -18,6 +19,7 @@
     <SevricesTitle/>
     <ServicesContent/>
     <WhyUs/>
+    <OurTeamTitle/>
 </main>
 
 <style>

@@ -27,10 +27,6 @@ section {
   overflow-x: hidden;
 }
 
-.wave {
-  display: block;
-}
-
 .services{
   display: flex;
   justify-content: flex-end;
