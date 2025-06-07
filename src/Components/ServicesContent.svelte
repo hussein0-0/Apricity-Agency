@@ -35,59 +35,58 @@
 section{
   background-color: #ffffff;
   padding-bottom: 7rem;
-    margin: 2rem 0rem;
-    margin-bottom: 12rem;
-    overflow: hidden;
+  margin: 2rem 0rem;
+  margin-bottom: 12rem;
+  overflow: hidden;
 }
 
 .container{
-    position: relative;
-    padding: 7.2rem 0rem;
-    margin: 0rem 3rem ;
+  position: relative;
+  padding: 7.2rem 0rem;
+  margin: 0rem 3rem ;
 }
 
 .title{
-    position:absolute;
-    color: #ffffff;
-    border: 4px solid rgb(6, 26, 50);
-    border-radius: 5rem;
-    background-color: rgb(6, 26, 50);
-    z-index: 0;
-    width: 49rem;
-    height: 12.05rem;
-    display: flex;
-    align-items: center;
-    z-index: 1;
+  position:absolute;
+  color: #ffffff;
+  border: 4px solid rgb(11, 27, 49);
+  border-radius: 5rem;
+  background-color: rgb(11, 27, 49);
+  z-index: 0;
+  width: 49rem;
+  height: 12.05rem;
+  display: flex;
+  align-items: center;
+  z-index: 1;
 }
 
 .disc{
-    position:absolute;
-    right: 0;
-    color: rgb(6,26,50);
-    border: 4px solid rgb(6, 26, 50);
-    border-radius: 5rem;
-    background-color: rgb(6,26,50,0.1);
-    width: 49rem;
-    height: 12.05rem;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+  position:absolute;
+  right: 0;
+  color: rgb(11,27,49);
+  border: 4px solid rgb(11, 27, 49);
+  border-radius: 5rem;
+  background-color: rgb(11,27,49,0.1);
+  width: 49rem;
+  height: 12.05rem;
+  display: flex;
+  align-items: center;
+  text-align: start;
 }
 
 .title p{
-    font-family: Nunito;
-    text-align: left;
-    font-size: 2.2rem;
-    font-weight: 500;
-    padding-left: 2rem;
+  font-family: "Nunito_Bold";
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding-left: 2rem;
 }
 
 .disc p{
-    font-family: Nunito;
-    text-align: start;
-    font-size: 1.8rem;
-    font-weight: 500;
-    padding-left: 4rem;
+  font-family: "Poppins_Regular";
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-left: 11rem;
 
 }
 

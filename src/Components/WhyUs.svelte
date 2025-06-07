@@ -1,4 +1,4 @@
-<section>
+<section id="WhyUs">
   <h2>WHY US</h2>
   <div class="left">
     <div class="container">
@@ -34,7 +34,7 @@ section {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: rgb(206, 150, 6);
+  background-color: rgb(230, 161, 58);
   color: #fff;
   margin: 0 auto;
   padding: 2rem 2rem;
@@ -55,13 +55,15 @@ section {
 }
 
 .container h3{
+  font-family: "Nunito_Black";
   padding: 1rem 0rem;
   font-size: 3rem;
-  color: #412302;
+  color: rgb(67,47,16);
   font-weight: 700;
 }
 
 .container p{
+  font-family: "Nunito_Regular";
   line-height: 2.2rem;
   font-size: 1.5rem;
 }

@@ -1,4 +1,4 @@
-<section>
+<section id="About">
     <h2 class="title">About</h2> 
     <div class="content">
      <p class="space">
@@ -33,17 +33,20 @@ section{
     padding: 3.2rem;
     padding-bottom: 0rem;
 }
+
 .content{
     padding-top: 0rem;
     font-size: 1.7rem;
     padding-right: 8.1rem;
-    font-family: Nunito;
+    font-family: "Nunito_Regular";
     line-height: 2.6rem;
 }
+
 .space{
     margin-bottom: 5.5rem;
 }
+
 .highlight{
-    color: rgb(251, 176, 59);
+    color: #E2A243;
 }
 </style>
