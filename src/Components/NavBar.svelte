@@ -27,12 +27,12 @@ nav{
 }
 
 .logo{
-    color:#E2A243 ;
+    color: transparent;
+     text-shadow: 10px -4px 15px rgb(0, 0, 0, 0.8), 0 0 0 #E2A243;
     font-size: 2rem;
     font-weight: bold;
     font-family: "Title";
     letter-spacing: 0.05em;
-    text-shadow: 2px 2px 13px #000000;
 }
 
 .nav_items{

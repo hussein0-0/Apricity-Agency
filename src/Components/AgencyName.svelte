@@ -12,8 +12,10 @@
 }
 
 .name h2{
-    color:#E2A243;
-    font-size: 5.5rem;
+    color: transparent;
+    text-shadow: 10px -4px 15px rgb(0, 0, 0, 0.8), 0 0 0 #E2A243;
+    font-size: 5.9rem;
+    font-weight: 300;
     font-family: "Title";
     letter-spacing: 0.01em;
 }

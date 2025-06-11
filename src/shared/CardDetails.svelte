@@ -16,9 +16,9 @@
         </div>
     </div>
     <div class="back">        
-        <a href={GitHub_Url} target="_blank" class="links"> <i class="fa-brands fa-github " style="color: rgb(6, 26, 50);"></i> {GitHub_User}</a>
-        <a href={Insta_Url} target="_blank" class="links"> <i class="fa-brands fa-instagram " style="color: rgb(6, 26, 50);"></i> {Insta_User}</a>
-        <a href={LinkeIn_Url} target="_blank" class="links"> <i class="fa-brands fa-linkedin " style="color: rgb(6, 26, 50);"></i> {LinkedIn_User}</a>
+        <a href={GitHub_Url} target="_blank" class="links"> <img src="src\Assets\icons8-github-512 White.png" alt=""> {GitHub_User}</a>
+        <a href={Insta_Url} target="_blank" class="links"> <img src="src\Assets\icons8-instagram-500 White.png" alt=""> {Insta_User}</a>
+        <a href={LinkeIn_Url} target="_blank" class="links"> <img src="src\Assets\icons8-linkedin-500 White.png" alt=""> {LinkedIn_User}</a>
     </div>
 </div>
 
@@ -94,16 +94,15 @@
     border: 2px solid rgb(169,121,50);
     border-radius: 0.6rem;
     margin: 8px;
-    padding-left: 1rem;
+    padding-left: 0rem;
     width: 13rem;
     height: 2.4rem;
     color: rgb(169,121,50);
     text-decoration: none;
     font-weight:600;
 }
-
-.links i{
-    font-size: 1.3rem;
-    margin-right: 20px;
+img{
+  width: 3.6rem;
+  padding: 5px 15px;
 }
 </style>

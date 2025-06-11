@@ -21,5 +21,6 @@
     margin: 7rem 7rem;
     display: flex;
     justify-content: space-evenly;
+    overflow: hidden;
 }
 </style>

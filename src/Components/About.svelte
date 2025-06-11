@@ -2,16 +2,13 @@
     <h2 class="title">About</h2> 
     <div class="content">
      <p class="space">
-        We are a passionate team of designers and developers offering
-        innovative and customized digital solutions tailored to<br/> your
-        <span class="highlight">vision</span> and <span class="highlight">needs</span>.<br>
-        We believe that good design and advanced technology are the keys to success in the digital world.
+        We are a passionate tech team brought together by a shared belief in innovation and purposeful design. <br>
+        Our agency is built on <span class="highlight">creativity, dedication, and responsibility.</span><br>
+        we deliver professional, fast, and reliable digital services with a unique touch.
      </p>
      <p>
-        We are a passionate team of designers and developers offering
-        innovative and customized digital solutions tailored to<br/> your
-        <span class="highlight">vision</span> and <span class="highlight">needs</span>.<br>
-        We believe that good design and advanced technology are the keys to success in the digital world.
+       With expertise in UI/UX design, frontend development (React & Svelte), and backend architecture, we turn ideas into digital experiences that are smooth, scalable, and user-focused. <br>
+       We're not just building websites.... <span class="highlight">We're building journeys.</span>
      </p>
     </div>
 </section>
@@ -35,7 +32,7 @@ section{
 }
 
 .content{
-    padding-top: 0rem;
+    padding-top: 01rem;
     font-size: 1.7rem;
     padding-right: 8.1rem;
     font-family: "Nunito_Regular";
@@ -43,7 +40,7 @@ section{
 }
 
 .space{
-    margin-bottom: 5.5rem;
+    margin-bottom: 6rem;
 }
 
 .highlight{

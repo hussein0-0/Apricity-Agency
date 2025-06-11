@@ -2,29 +2,29 @@
   <h2>WHY US</h2>
   <div class="left">
     <div class="container">
-      <h3>this is the first reason</h3>
-      <p>Innovative Designs and Modern Technologiesklsklskf li okml l lklsdk flk lk lk lk l klk llll;sdlf;skf</p>
+      <h3>1. Fast and organized</h3>
+      <p> because we value your time</p>
     </div>
   </div>
 
   <div class="right">
     <div class="container">
-      <h3>this is the first reason</h3>
-      <p>Innovative Designs and Modern Technologiesklsklskf li okml l lklsdk flk lk lk lk l klk llll;sdlf;skf</p>
+      <h3>2. Smooth and professional</h3>
+      <p>because you deserve a seamless collaboration</p>
     </div>
   </div>
 
   <div class="left">
     <div class="container">
-      <h3>this is the first reason</h3>
-      <p>Innovative Designs and Modern Technologiesklsklskf li okml l lklsdk flk lk lk lk l klk llll;sdlf;skf</p>
+      <h3>3. Creative and thoughtful</h3>
+      <p> because details make all the difference</p>
     </div>
   </div>
 
   <div class="right">
     <div class="container">
-      <h3>this is the first reason</h3>
-      <p>Innovative Designs and Modern Technologiesklsklskf li okml l lklsdk flk lk lk lk l klk llll;sdlf;skf</p>
+      <h3>4. Responsible and committed</h3>
+      <p>because we never compromise on quality</p>
     </div>
   </div>
 </section>
