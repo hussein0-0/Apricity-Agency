@@ -7,8 +7,7 @@
   import WhyUs from "../Components/WhyUs.svelte";
   import OurTeamTitle from "../Components/OurTeamTitle.svelte";
   import Card from "../Components/Card.svelte";
-
-
+  import Footer from "../Components/Footer.svelte";
 </script>
 
 <main>
@@ -21,9 +20,13 @@
     <WhyUs/>
     <OurTeamTitle/>
     <Card/>
+    <Footer/>
 </main>
 
 <style>
+  main{
+    overflow-x: hidden;
+  }
 @font-face{
   font-family: "Title";
   src: url(../fonts/COPRGTL.TTF) format('truetype');

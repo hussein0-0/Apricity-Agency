@@ -7,18 +7,19 @@
     export let GitHub_Url;
     export let Insta_Url;
     export let LinkeIn_Url;
+    export let Image;
 </script>
 <div class="card">
-    <div class="front">
+    <div class="front" style="background-image: url({Image});">
         <div class="container">
             <p class="name">{name}</p>
             <p class="job">{job}</p>    
         </div>
     </div>
     <div class="back">        
-        <a href={GitHub_Url} target="_blank" class="links"> <img src="src\Assets\icons8-github-512 White.png" alt=""> {GitHub_User}</a>
-        <a href={Insta_Url} target="_blank" class="links"> <img src="src\Assets\icons8-instagram-500 White.png" alt=""> {Insta_User}</a>
-        <a href={LinkeIn_Url} target="_blank" class="links"> <img src="src\Assets\icons8-linkedin-500 White.png" alt=""> {LinkedIn_User}</a>
+        <a href={GitHub_Url} target="_blank" class="links"> <img src="src\Assets\icons8-github-512.png" alt=""> {GitHub_User}</a>
+        <a href={Insta_Url} target="_blank" class="links"> <img src="src\Assets\icons8-instagram-500.png" alt=""> {Insta_User}</a>
+        <a href={LinkeIn_Url} target="_blank" class="links"> <img src="src\Assets\icons8-linkedin-500.png" alt=""> {LinkedIn_User}</a>
     </div>
 </div>
 
@@ -35,8 +36,10 @@
 }
 
 .front{
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
-    background-color: rgb(231, 231, 231);
     border-radius: 1.7rem;
     width: 15.5rem;
     height: 28.4rem;
@@ -54,7 +57,7 @@
     margin-bottom: 1.4rem;
     padding: 1rem 0rem 1rem 1.8rem;
     align-items: center;
-    background-color:rgb(231, 231, 231) ;
+    backdrop-filter: blur(0.7rem);
 }
 
 .container .name{
@@ -73,7 +76,7 @@
 }
 
 .back{
-    background-color: rgb(255, 255, 255);
+    background-image: url("D:/Apricity/src/Images/bg.png");
     border-radius: 1.7rem;
     width: 15.5rem;
     height: 28rem;
