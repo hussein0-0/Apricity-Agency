@@ -1,3 +1,14 @@
+<script>
+  import Form from "./Form.svelte";
+
+  let showForm = false;
+  function ClickHandeler(){
+    showForm = !showForm;
+    console.log("clicked")
+  }
+</script>
+
+<Form {showForm} on:click={ClickHandeler}/>
 <main>
     <header id="Home">
         <nav>
@@ -9,7 +20,7 @@
                 <li><a href="#WhyUs">Why us</a></li>
                 <li><a href="#Team">Team</a></li>
             </ul>
-            <button>Become a client?</button>
+            <button on:click={ClickHandeler}>Become a client?</button>
         </nav>
     </header>
 </main>
@@ -62,5 +73,4 @@ button{
     border-radius: 2rem;
     padding: 1em 1.6em;
 }
-
 </style>

@@ -1,8 +1,19 @@
+<script>
+  import Form from "./Form.svelte";
+
+  let showForm = false;
+  function ClickHandeler(){
+    showForm = !showForm;
+    console.log("clicked")
+  }
+</script>
+
+<Form {showForm} on:click={ClickHandeler}/>
 <section>
     <section class="container">
         <div class="logo">APRICITY</div>
         <div class="caption">We're gonna build something <br> GREAT together !</div>
-        <button>Become a client ?</button>
+        <button on:click={ClickHandeler}>Become a client ?</button>
     </section>
     <section class="footer">
         <div>
@@ -20,8 +31,7 @@
                 <a href=""><img src="src\Assets\icons8-telegram-app-512.png" alt=""></a>
                 <a href=""><img src="src\Assets\icons8-whatsapp-512.png" alt=""></a>
             </div>
-        </div>
-           
+        </div>  
         <div>
             <div class="Title">Do you Have any problem ? <br> Let us know</div>
             <div class="input-group">
@@ -150,4 +160,5 @@ div{
   letter-spacing: 1px;
   color: white;
 }
+
 </style>
