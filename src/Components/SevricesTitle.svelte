@@ -20,6 +20,7 @@ section {
 }
 
 .wave-container {
+  margin: -0.2vw 0vw;
   position: absolute;
   top:0;
   left: 0;
@@ -28,16 +29,40 @@ section {
 }
 
 .services{
+  margin-bottom: -0.2vw;
   display: flex;
   justify-content: flex-end;
-  padding: 8rem  5rem;
+  padding: 8vw 5vw;
 }
 
 .services h2 {
-  font-size: 10.2rem;
+  font-size: 10.4vw;
   font-weight: 1000;
   font-family: "Heading";
   position: absolute;
   z-index: 1;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .services{
+    padding: 8vw 3vw;
+  }
+  .services h2{
+    font-size: 11vw;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    section{  
+      margin-bottom: 0;
+    }
+    .services{
+      padding: 9vw 6vw ;
+    }
+    .services h2{
+      font-size: 10vw;
+    }
 }
 </style>

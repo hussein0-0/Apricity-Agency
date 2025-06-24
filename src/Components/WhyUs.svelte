@@ -42,19 +42,22 @@
 <style>
 section {
   position: relative;
-  margin: 0;
-  padding: 0;
   background-color: rgb(230, 161, 58);
   color: #fff;
-  margin: 0 auto;
-  padding: 2rem 2rem;
+  margin: -0.2vw 0;
+  padding: 2vw 2vw;
+  z-index: 1;
+}
+h2{
+  font-size: 4vw;
 }
 
 .container{
   text-align: left;
 }
 .left {
-  padding: 4rem 2rem;
+  display: flex;
+  padding: 4.2vw 2.2vw;
   left: 0;
 }
 
@@ -66,15 +69,41 @@ section {
 
 .container h3{
   font-family: "Nunito_Regular";
-  font-size: 2rem;
+  font-size: 2.1vw;
   color: white;
 }
 
 .container span{
   font-family: "Nunito_Regular";
-  padding: 1rem 0rem;
-  font-size: 2rem;
+  padding: 1vw 0vw;
+  font-size: 2.1vw;
   color: rgb(67,47,16);
   font-weight: 700;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .left , .right{
+    padding: 4vw 2.2vw;
+  }
+  .container h3{
+    font-size: 2.7vw;
+  }
+  .container span{
+    font-size: 2.7vw;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .left , .right{
+    justify-content: left;
+  }
+  .container h3{
+    font-size: 3.6vw;
+  } 
+  .container span{
+    font-size: 3.6vw;
+  }
 }
 </style>

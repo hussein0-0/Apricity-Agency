@@ -21,6 +21,7 @@
 
 <style>
 section{
+    margin-top: -0.2vw;
     position: relative;
     background-color: #fff;
 }
@@ -39,10 +40,29 @@ section{
     z-index: 2;
 }
 .title{
+    margin-bottom: -0.2vw;
     font-family:"Heading";
     color:rgb(230, 161, 58);
-    font-size: 7rem;
+    font-size: 7.1vw;
     display: flex;
     justify-content: center;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 8vw;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    section{
+        margin: 0;
+        padding: 0;
+    }
+    .title {
+        font-size: 11vw;
+    }
 }
 </style>

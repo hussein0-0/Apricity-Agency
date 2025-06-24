@@ -17,33 +17,72 @@
 
 .title{
     writing-mode: vertical-rl;
-    font-size: 10rem;
+    font-size: 10vw;
     font-family: "Heading";
-    margin: 0rem 7rem;
-    margin-right: 8rem;
+    margin: 0vw 8vw 0vw 7vw;
 }
 
 section{
     background-color: rgb(6, 26, 50);
     color:white;
     display: flex;
-    padding: 3.2rem;
-    padding-bottom: 0rem;
+    padding: 3.3vw;
+    padding-bottom: 0vw;
 }
 
 .content{
-    padding-top: 01rem;
-    font-size: 1.7rem;
-    padding-right: 8.1rem;
+    padding-top: 1vw;
+    font-size: 2vw;
+    padding-right: 8.1vw;
     font-family: "Nunito_Regular";
-    line-height: 2.6rem;
+    line-height: 2.7vw;
 }
 
 .space{
-    margin-bottom: 6rem;
+    margin-bottom: 6.2vw;
 }
 
 .highlight{
     color: #E2A243;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .title{
+        font-size: 15vw;
+        margin: 0vw 8vw 0vw 3vw;
+    }
+
+    .content{
+        padding-top: 2vw;
+        font-size: 2.5vw;
+        padding-right: 5vw;
+        line-height: 3.3vw;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    section{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: -0.6vw;
+        flex-direction: column;
+        text-align: left;   
+        padding: 9vw 12vw;     
+    }
+    .title{
+        writing-mode: horizontal-tb;
+        margin: 0;
+        font-size: 12vw;
+        margin-bottom: 9vw;
+    }
+    .content{
+        font-size: 4.4vw;
+        line-height: 7vw;
+    }
+    .space{
+        margin-bottom: 10vw ;
+    }
 }
 </style>

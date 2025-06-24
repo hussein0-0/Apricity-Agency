@@ -13,9 +13,22 @@
 <style>
 section{
   background-color: #ffffff;
-  padding-bottom: 7rem;
-  margin: 2rem 0rem;
-  margin-bottom: 12rem;
+  padding: 2vw 0vw 15vw 0vw;
   overflow: hidden;
+  margin: 0;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  section{
+    padding-bottom: 20vw;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    section{  
+      padding: 6vw 0vw 16vw 0vw;
+    }
 }
 </style>

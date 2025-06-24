@@ -18,9 +18,29 @@
 
 <style>
 .Cards{
-    margin: 7rem 7rem;
+  background-color: white;
+    padding: 7vw 7vw;
     display: flex;
     justify-content: space-evenly;
     overflow: hidden;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin: 0;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .Cards {
+        padding: 5vw;
+        gap: 2.4vw;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .Cards {
+        padding: 7vw 2vw;
+        gap: 1vw;
+    }
 }
 </style>

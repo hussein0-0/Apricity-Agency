@@ -25,7 +25,10 @@
 
 <style>
   main{
+    background-color: rgb(6, 26, 50);
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 @font-face{
   font-family: "Title";
