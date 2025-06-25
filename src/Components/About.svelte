@@ -7,7 +7,7 @@
 
   gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-  let container; // reference to the local wrapper
+  let container;
 
   onMount(() => {
     const paragraph = container.querySelectorAll("p");

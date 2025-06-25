@@ -18,7 +18,7 @@
         ease: "power2.inOut",
         onComplete: () => {
           index = (index + 1) % words.length;
-          setTimeout(changeWord, 1000); // wait before changing again
+          setTimeout(changeWord, 1000); // timer to wait before changing again uwu
         },
       });
     }
