@@ -1,3 +1,26 @@
+<script>
+  import ServicesDetails from "../shared/ServicesDetails.svelte";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import TextPlugin from "gsap/TextPlugin";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    gsap.from('.services',{
+      scrollTrigger: {
+        trigger: ".services",
+        start: "top 40%",
+        toggleActions: "play none none none",
+      },
+      duration:1.5,
+      opacity:0,
+      x:'60%',
+      ease: 'power2.inOut',
+      stagger: 0.2
+    })
+  });
+</script>
+
 <section id="Services">
   <div class="wave-container">
     <svg class="wave" viewBox="0 0 1440 250" preserveAspectRatio="none">

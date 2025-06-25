@@ -8,6 +8,7 @@
   import OurTeamTitle from "../Components/OurTeamTitle.svelte";
   import Card from "../Components/Card.svelte";
   import Footer from "../Components/Footer.svelte";
+  import ApricityName from "../Components/ApricityName.svelte";
 </script>
 
 <main>
