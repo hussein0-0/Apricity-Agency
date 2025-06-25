@@ -216,7 +216,7 @@
     }
 
     .links {
-      width: 33vw;
+      width: 34vw;
       height: 8vw;
       font-size: 3vw;
       margin: 0.95vw;
@@ -224,7 +224,7 @@
     }
 
     img {
-      width: 9.5vw;
+      width: 9vw;
       padding: 2vw 2vw;
     }
   }

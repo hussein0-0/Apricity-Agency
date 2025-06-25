@@ -99,7 +99,7 @@
 
   /* Tablet styles */
   @media (max-width: 1024px) {
-    .title {
+    .about-title {
       font-size: 15vw;
       margin: 0vw 8vw 0vw 3vw;
     }
@@ -122,7 +122,7 @@
       text-align: left;
       padding: 9vw 12vw;
     }
-    .title {
+    .about-title {
       writing-mode: horizontal-tb;
       margin: 0;
       font-size: 12vw;

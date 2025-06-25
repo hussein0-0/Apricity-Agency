@@ -52,7 +52,7 @@
 .background{
     margin: 0;
     width: 100%;
-    height: 100vh;
+    height: 101vh;
     position: fixed;
     background-color: rgb(0, 0, 0, 0.25);
     backdrop-filter: blur(0.5rem);

@@ -139,17 +139,20 @@
   /* Mobile styles */
   @media (max-width: 480px) {
     .container {
+      display: flex;
+      flex-wrap: wrap;
       margin-top: 7vw;
       padding: 0;
     }
     .title {
       position: relative;
       width: 100%;
-      margin-bottom: -9vw;
+      margin: 0 0 -9vw 0;
       height: 22vw;
       border-radius: 4vw;
     }
     .disc {
+      margin: 0;
       position: relative;
       width: 100%;
       height: 22vw;

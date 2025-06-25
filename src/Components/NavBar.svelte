@@ -199,7 +199,7 @@
     }
 
     .nav_items {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: -100%;
       width: 50%;
@@ -210,7 +210,7 @@
       align-items: center;
       border: 1px solid white;
       transition: 0.4s ease-in-out;
-      z-index: 10;
+      z-index: 1000;
     }
 
     .nav_items.active {
