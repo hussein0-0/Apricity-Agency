@@ -33,10 +33,9 @@
 </script>
 
 <Form {showForm} on:click={ClickHandeler} />
-<main>
   <header id="Home">
     <nav>
-      <div class="logo">APRICITY</div>
+      <div class="logo"><img src="src/Assets/Apricity Logo @4x.png" alt=""></div>
       <button class="mobile-menu-toggle" on:click={toggleMobileMenu}>
         <span>.</span>
         <span></span>
@@ -46,7 +45,7 @@
         <button
           class="close"
           class:active={mobileMenuOpen}
-          on:click={toggleMobileMenu}>X</button
+          on:click={toggleMobileMenu}><img src="src/Assets/icons8-left-96.png" alt=""></button
         >
         <li>
           <a href="#Home" on:click={() => (mobileMenuOpen = false)}>Home</a>
@@ -70,7 +69,6 @@
       <button on:click={ClickHandeler}>Become a client?</button>
     </nav>
   </header>
-</main>
 
 <style>
   header {
@@ -88,15 +86,8 @@
     position: relative;
   }
 
-  .logo {
-    color: transparent;
-    text-shadow:
-      0.15vw 0.17vw 0.6vw rgb(0, 0, 0, 0.8),
-      0 0 0 #e2a243;
-    font-size: 2.2vw;
-    font-weight: bold;
-    font-family: "Title";
-    letter-spacing: 0.05em;
+  .logo img{
+    width: 6vw;
   }
 
   .mobile-menu-toggle {
@@ -159,10 +150,6 @@
     nav {
       padding: 3vw 4vw;
     }
-    .logo {
-      font-size: 2.2vw;
-      padding-right: 1vw;
-    }
     .nav_items li {
       font-size: 1.6vw;
     }
@@ -175,23 +162,32 @@
 
   /* Mobile styles */
   @media (max-width: 480px) {
-    main {
-      margin-bottom: 0;
+    header{
+      position: fixed;
+      width: 100%;
     }
-
     nav {
       padding: 4vw 3vw;
       flex-wrap: wrap;
+      z-index: 1001;
     }
     .mobile-menu-toggle span {
       font-size: 0;
       width: 6vw;
-      height: 0.8vw;
+      height: 0.3vw;
       background-color: #e2a243;
-      margin: 0.6vw 0 0 0;
+      margin: 0.16rem 0;
+      padding: 0.2vw;
     }
 
     .mobile-menu-toggle {
+      padding: 1.5vw 2vw 1.5vw 5vw;
+      border: 1px solid #e2a243;
+      border-radius: 1vw;
+      border-bottom-right-radius: 2vw;
+      position: absolute;
+      top: 6rem;
+      left: -2vw;
       display: flex;
       flex-direction: column;
       cursor: pointer;
@@ -199,22 +195,25 @@
     }
 
     .nav_items {
+      padding: 7rem 0 0 2rem;
       position: fixed;
-      top: 0;
-      right: -100%;
-      width: 50%;
-      height: 50vh;
-      background-color: rgb(6, 26, 50);
+      top: 0rem;
+      left: -100%;
+      width: 60%;
+      height: 100vh;
+      background-color: rgb(0, 0, 0 , 0.1);
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
       border: 1px solid white;
       transition: 0.4s ease-in-out;
       z-index: 1000;
+      backdrop-filter: blur(1rem);
+      overflow-y: auto;
     }
 
     .nav_items.active {
-      right: 0;
+      left: 0;
     }
 
     .nav_items li {
@@ -223,24 +222,26 @@
     }
 
     button {
-      display: none;
+      font-size: 3.2vw;
+      padding: 2.5vw 2.5vw;
+      border-radius: 5vw; 
     }
 
-    .logo {
-      text-shadow:
-        0.6vw 0.5vw 1.6vw rgb(0, 0, 0, 0.8),
-        0 0 0 #e2a243;
-      font-size: 5vw;
+    .logo img{
+      width: 12vw;
     }
 
     .close {
       display: flex;
       position: absolute;
-      right: 0;
-      top: 0;
-      font-size: 2vh;
+      left: 0.3rem;
+      top: 2rem;
       background-color: transparent;
       border: none;
+    }
+    .close img{
+      width: 8vw;
+      mix-blend-mode: color-burn;
     }
   }
 </style>

@@ -1,11 +1,124 @@
 <script>
     export let showForm;
+    let done;
+    let validated = false;
+    let name = "";
+    let Number = "";
+    let email = "";
+    let service = "";
+    let Brand = "";
+    let desc = "";
+
+    let errors = {
+        name : "",
+        Number : "",
+        email : "",
+        service : "",
+        Brand : "",
+        desc : ""
+    }
+    function Name_Validation(){
+        if(/\d/.test(name)){
+            errors.name = "Name Can not contain a number";
+            validated =false;
+        }
+        else{
+            errors.name = "";
+            validated = true;
+        }   
+    }
+
+    function Number_Validation(){
+        if(!/^\+\d{3}( \d{3}){3}$/.test(Number) && !/^\+?\d{12}$/.test(Number)){
+            errors.Number = "Enter a valid number";
+            validated = false;
+        }
+        else{
+            errors.Number = "";
+            validated = true;
+        }
+    }
+
+    function Email_Validation(){
+        if (!/^\S+@\S+\.\S+$/.test(email)){
+            errors.email = "Enter a valid email";
+            validated = false;
+        }
+        else{
+            errors.email = "";
+            validated = true;
+        }
+    }
+
+    function Service_Validation(){
+        if(service === ""){
+            errors.service = "Service is Required"
+            validated = false;
+        }
+        else{
+            errors.service = "";
+            validated = true;
+        } 
+    }
+    
+    function Brand_Validation(){
+        if(Brand.trim() === ""){
+            errors.Brand = "Brand Name is Required"
+            validated = false;
+        }
+        else{
+            errors.Brand = "";
+        }
+    }
+
+    function Desc_Validation(){
+        if(desc.trim() === ""){
+            errors.desc = "This field is Required"
+            validated = false;
+        }
+        else{
+            errors.desc = "";
+        }
+    }
+
+    function handleSubmit(){
+        validated = true;
+        errors = {
+            name : "",
+            Number : "",
+            email : "",
+            service : "",
+            Brand : "",
+            desc : ""
+        }
+        if(name.trim() === ""){
+            errors.name = "Name is Required"
+            validated = false;
+        }        
+        if(Number === ""){
+            errors.Number = "Phone Number is Required"
+            validated = false;
+        }        
+        if(email === ""){
+            errors.email = "Email is Required"
+            validated = false;
+        }
+        Service_Validation()
+        Brand_Validation()
+        Desc_Validation()        
+       
+
+        if(validated){
+            done = true;
+            console.log("ok")
+        }
+    }
 </script>
 
 {#if showForm}
-<div class="background" on:click|self>
+<div class="background">
     <div class="Form">
-        <form action="">
+        <form action="" on:submit|preventDefault={handleSubmit}>
             <div class="header">
                 <p class="title">Hey my friend,</p>
                 <p> Let us know how we can help you!</p>
@@ -13,31 +126,49 @@
             </div>
             <div>
                 <label for="Name">Name</label> <br>
-                <input type="text" placeholder="Your Name" required>
+                <input type="text" placeholder="Your Name" bind:value={name} on:change={Name_Validation} class:Error={errors.name}>
+                {#if errors.name}
+                    <span>{errors.name}</span>
+                {/if}
             </div>    
             <div>
                 <label for="Contact-Number">Contact Number</label> <br>
-                <input type="tel" placeholder="+000 000 000 000" required>
+                <input type="tel" placeholder="+000 000 000 000" bind:value={Number} on:change={Number_Validation} class:Error={errors.Number}>
+                {#if errors.Number}
+                    <span>{errors.Number}</span>
+                {/if}
             </div>    
             <div>
                 <label for="Email">Email Address</label> <br>
-                <input type="email" placeholder="email@gmail.com" required>
+                <input type="email" placeholder="email@gmail.com" bind:value={email} on:change={Email_Validation} class:Error={errors.email}>
+                {#if errors.email}
+                    <span>{errors.email}</span>
+                {/if}
             </div>   
             <div>
                 <label for="Service">What service are you interested in?</label> <br>
-                <select name="Service" id="Service" required>
+                <select name="Service" id="Service" bind:value={service} on:change={Service_Validation} class:Error={errors.service}>
                     <option value="" disabled selected>Select service</option>
                     <option value="Web-App">Web App</option>
                     <option value="Application">Application</option>
                 </select>
+                {#if errors.service}
+                    <span>{errors.service}</span>
+                {/if}
             </div> 
             <div>
                 <label for="Brand-Name">Brand Name</label> <br>
-                <input type="text" placeholder="Apricity" required>
+                <input type="text" placeholder="Apricity" bind:value={Brand} on:change={Brand_Validation} class:Error={errors.Brand}>
+                {#if errors.Brand}
+                    <span>{errors.Brand}</span>
+                {/if}
             </div>    
             <div>
                 <label for="Details">Tell us more about your request</label> <br>
-                <textarea placeholder="Enter text..." required></textarea>
+                <textarea placeholder="Enter text..." bind:value={desc} on:change={Desc_Validation} class:Error={errors.desc}></textarea>
+                {#if errors.desc}
+                    <span>{errors.desc}</span>
+                {/if}
             </div>
             <div class="buttons">
                 <input type="button" class="cencel" value="Cencel" on:click>
@@ -117,7 +248,6 @@ textarea{
     min-height: 2.3rem;
     height: auto;
     resize: none; 
-    border: none;
     background-color: rgb(226, 226, 226);
     border: none;
     border-radius: 0.6rem;
@@ -153,6 +283,12 @@ textarea::-webkit-scrollbar{
     color: rgb(230, 161, 58);
     background-color: white;
     border: 0.1rem solid rgb(230, 161, 58);
+}
+.Error{
+    border: 2px solid rgb(230, 14, 14);
+}
+span{
+    color:rgb(230, 14, 14) ;
 }
 
 /* Tablet styles */

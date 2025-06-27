@@ -45,4 +45,10 @@
     font-family: "Title";
     letter-spacing: 0.01em;
   }
+
+  @media(max-width: 480px){
+    header{
+      margin-top: 20vw;
+    }
+  }
 </style>
