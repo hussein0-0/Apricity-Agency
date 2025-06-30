@@ -9,7 +9,7 @@
     gsap.from('.services',{
       scrollTrigger: {
         trigger: ".services",
-        start: "top 40%",
+        start: "top 80%",
         toggleActions: "play none none none",
       },
       duration:1.5,

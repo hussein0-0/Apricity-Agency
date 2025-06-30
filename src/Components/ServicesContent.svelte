@@ -4,6 +4,7 @@
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import TextPlugin from "gsap/TextPlugin";
   import { onMount } from "svelte";
+  import ShowModel from "./showModel.svelte";
 
   // onMount(() => {
   //   gsap.from()
@@ -32,6 +33,7 @@
     Title="Educational Tech Content"
     Disc="We share simplified tech tutorials, coding tips, and curated programming resources for learners of all levels."
   />
+  <ShowModel />
 </section>
 
 <style>
