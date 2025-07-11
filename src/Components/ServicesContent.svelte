@@ -48,7 +48,7 @@
   /* Tablet styles */
   @media (max-width: 1024px) {
     section {
-      padding-bottom: 20vw;
+      padding-bottom: 10vw;
     }
   }
 

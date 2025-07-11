@@ -1,5 +1,4 @@
 <section id="WhyUs">
-  <h2>WHY US</h2>
   <div class="left">
     <div class="container">
       <h3>We're not just a digital agency — we're a <span>team</span> that <br> 

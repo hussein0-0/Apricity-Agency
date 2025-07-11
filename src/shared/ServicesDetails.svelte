@@ -114,7 +114,7 @@
   /* Tablet styles */
   @media (max-width: 1024px) {
     .container {
-      padding: 8.4vw 0vw;
+      padding: 3vw 0vw;
       margin: 2vw 2vw;
     }
     .title,
