@@ -1,48 +1,41 @@
 <script>
   import ServicesDetails from "../shared/ServicesDetails.svelte";
   import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { onMount } from "svelte";
+
+  gsap.registerPlugin(ScrollTrigger);
+
   export let Title;
   export let Disc;
 
   let serEl;
 
-  function handleMouseEnter() {
-    gsap.to(serEl.querySelector(".title"), {
-      duration: 1,
-      marginRight: "-5vw",
-      ease: "power2.out",
-    });
+onMount(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: serEl,
+      start: "top 95%",
+      end: "bottom 75%",
+      scrub: 0.6,
+    }
+  });
 
-    gsap.to(serEl.querySelector(".disc"), {
-      duration: 1,
-      marginLeft: "-5vw",
-      ease: "power2.out",
-    });
-  }
+  tl.to(serEl.querySelector(".title"), {
+    x: "-19vw",
+    ease: "power2.out",
+  }, 0)
+  .to(serEl.querySelector(".disc"), {
+    x: "19vw",
+    ease: "power2.out",
+  }, 0);
+});
 
-  function handleMouseLeave() {
-    gsap.to(serEl.querySelector(".title"), {
-      duration: 1,
-      marginRight: "-24vw",
-      ease: "power4.inOut",
-    });
-
-    gsap.to(serEl.querySelector(".disc"), {
-      duration: 1,
-      marginLeft: "-24vw",
-      ease: "power4.inOut",
-    });
-  }
 </script>
 
-<div
-  bind:this={serEl}
-  on:mouseenter={handleMouseEnter}
-  on:mouseleave={handleMouseLeave}
-  class="container"
->
+<div bind:this={serEl} class="container">
   <div class="title">
-    <p><img src="src\Assets\icons8-bulb-384.png" alt="" /> {Title}</p>
+    <p><img src="src/Assets/icons8-bulb-384.png" alt="" /> {Title}</p>
   </div>
   <div class="disc"><p>{Disc}</p></div>
 </div>
@@ -110,6 +103,11 @@
     width: 2.3vw;
     margin: 0vw 1vw;
   }
+
+  .title, .disc {
+  will-change: transform;
+}
+
 
   /* Tablet styles */
   @media (max-width: 1024px) {

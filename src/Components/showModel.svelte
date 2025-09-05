@@ -30,12 +30,14 @@
       0.1,
       1000
     );
+    // camera.position.set(1.25,0,0);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
     const loader = new GLTFLoader();
+
     loader.load("/why.glb", (gltf) => {
       why = gltf.scene;
       scene.add(why);
@@ -88,12 +90,13 @@
     gsap.from(".viewer", {
       scrollTrigger: {
         trigger: ".viewer",
-        start: "top 40%",
-        toggleActions: "play none none none",
+        start: "top 70%",
+        end: "bottom 45",
+        toggleActions: "play reverse play reverse",
       },
       duration: 2.5,
       opacity: 0,
-      x:-100
+      x: -100,
     });
 
     return () => {
@@ -102,13 +105,14 @@
   });
 </script>
 
-<div bind:this={container} class="viewer" />
+<div bind:this={container} class="viewer"></div>
 
 <style>
   .viewer {
     position: absolute;
-    width: 100%;
-    height: 500px;
+    right: 0;
+    width: 70%;
+    height: 50%;
     background: transparent;
     z-index: 2;
   }

@@ -1,14 +1,6 @@
 <script>
   import ServicesDetails from "../shared/ServicesDetails.svelte";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import TextPlugin from "gsap/TextPlugin";
-  import { onMount } from "svelte";
   import ShowModel from "./showModel.svelte";
-
-  // onMount(() => {
-  //   gsap.from()
-  // });
 </script>
 
 
