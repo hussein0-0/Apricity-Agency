@@ -10,8 +10,19 @@
   import Footer from "../Components/Footer.svelte";
   import ApricityName from "../Components/ApricityName.svelte";
   import ShowModel from "../Components/showModel.svelte";
+  import {onMount} from "svelte"
+  let loading = true;
+  onMount(() => {
+    setTimeout(() => {loading = false;}, 1500);
+  });
 </script>
 
+{#if loading}
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+{:else}
 <main>
   <title>Apricity Agency</title>
   <NavBar />
@@ -24,6 +35,7 @@
   <Card />
   <Footer />
 </main>
+{/if}
 
 <style>
   main {
@@ -59,5 +71,35 @@
   @font-face {
     font-family: "Nunito_Regular";
     src: url(../fonts/FontsFree-Net-Nunito-Regular.ttf) format("truetype");
+  }
+  
+  .loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(6, 26, 50);
+    color: #e2a243;
+    font-family: "Nunito_SemiBold";
+    font-size: 1.2rem;
+    z-index: 9999;
+  }
+
+  .spinner {
+    width: 5rem;
+    height: 5rem;
+    border: 0.4rem solid rgba(255, 255, 255, 0.2);
+    border-top-color: #e2a243;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1.5rem;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
   }
 </style>

@@ -118,7 +118,7 @@ section{
 .input-group {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.6vw;
+  margin-top: 1vw;
   padding-bottom: 1vw;
   border-bottom: 0.1vw solid white;
 }
@@ -134,7 +134,7 @@ section{
   field-sizing: content;
   padding: 0;
   width: 20vw;
-  max-height: 10vw;
+  max-height: 8vw;
 }
 
 .input-group textarea::-webkit-scrollbar{
