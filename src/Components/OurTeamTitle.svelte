@@ -1,3 +1,31 @@
+<script>
+    import { onMount } from 'svelte';
+    import {gsap} from 'gsap';
+    import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    onMount(() => {
+        const title = document.querySelector('.team-title');
+
+        gsap.fromTo(title, 
+            {y: 100, opacity: 0}, 
+            {
+                y: 0, 
+                opacity: 1, 
+                duration: 2, 
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: title,
+                    start: "top 70%",
+                    toggleActions: "play none none none"
+                }
+            }
+        );    
+    });
+
+</script>
+
 <section id="Team">
     <div class="wave-container">
         <svg class="top"  viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -16,7 +44,7 @@
             </path>
         </svg>
     </div>
-    <div class="title">Our Team</div>
+    <div class="team-title">Our Team</div>
 </section>
 
 <style>
@@ -39,7 +67,7 @@ section{
     position: absolute;
     z-index: 2;
 }
-.title{
+.team-title{
     margin-bottom: -0.2vw;
     font-family:"Heading";
     color:rgb(230, 161, 58);
@@ -50,7 +78,7 @@ section{
 
 /* Tablet styles */
 @media (max-width: 1024px) {
-    .title {
+    .team-title {
         font-size: 8vw;
     }
 }
@@ -61,7 +89,7 @@ section{
         margin: 0;
         padding: 0;
     }
-    .title {
+    .team-title {
         font-size: 11vw;
     }
 }
