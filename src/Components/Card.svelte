@@ -14,6 +14,9 @@
 
 <CardDetails name="Hussein Mahfoud" job="Front-end Developer" Insta_User="Hussein Mahfoud" GitHub_User="Hussein Mahfoud" 
   LinkedIn_User="Hussein Mahfoud" GitHub_Url="https://github.com/hussein0-0" Insta_Url="https://www.instagram.com/hussein_mahfoud74?igsh=MXhlYmY3anliNXhxZw==" LinkeIn_Url="" Image="src/Images/Hussein.png"/>   
+
+  <CardDetails name="Hassan Shaaban" job="Mobile Developer" Insta_User="Hassan Shaaban" GitHub_User="Hassan Shaaban" 
+  LinkedIn_User="Hassan Shaaban" GitHub_Url="https://github.com/hasanShaaban" Insta_Url="https://www.instagram.com/hasan_a_shaaban?igsh=MWM3cnJhbWQ2cThqcg==" LinkeIn_Url="#" Image="src/Images/hasan.png"/>
 </div>
 
 <style>
@@ -24,7 +27,7 @@
     justify-content: space-evenly;
     overflow: hidden;
     flex-wrap: wrap;
-    gap: 2vw;
+    gap: 3vw;
     margin: 0;
 }
 

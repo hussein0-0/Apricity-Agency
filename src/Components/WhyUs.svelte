@@ -1,4 +1,25 @@
 <section id="WhyUs">
+<svg class="curve-divider" viewBox="0 0 100 1000" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="fadeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgb(122, 57, 4)" stop-opacity="1" />
+      <stop offset="100%" stop-color="rgb(122, 57, 4)" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M25 0
+       C75 150, 15 300, 25 500
+       C25 650, 70 850, 30 1000
+       L40 1000
+       C85 850, 35 650, 40 500
+       C40 300, 85 150, 35 0
+       Z"
+    fill="url(#fadeFill)"
+  />
+</svg>
+
+
   <div class="row">
     <div class="cell left"></div>
     <div class="cell right"></div>
@@ -56,6 +77,26 @@
 </section>
 
 <style>
+  #WhyUs {
+    position: relative; /* so curve positions relative to section */
+    display: grid;
+    gap: 2vw;
+    background-color: rgb(230, 161, 58);
+    padding: 2vw;
+    color: #fff;
+  }
+
+  .curve-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* center between columns */
+    width: 14vw; /* thickness of divider */
+    height: 100%; /* full height of section */
+    transform: translateX(-50%);
+    z-index: 0; /* behind the text */
+  }
+
   section {
     display: grid;
     gap: 2vw;
